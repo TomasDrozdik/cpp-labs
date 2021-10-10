@@ -24,6 +24,16 @@
 * facing any issue contact me via email or Mattermost *in advance*
 
 
+## Build and test
+This is a CMake-based repository.
+It tries to be OS-agnostic and thus you should be able to clone this repo using your favorite IDE and instantly build everything and run tests.
+[CMake](https://cmake.org/) along with unit test framework [GoogleTest](https://github.com/google/googletest) is introduced in [lab2](lab2/lab2.md) and will be used since this lab.
+
+**Branching strategy**
+Each lab materials will be developed under dedicated branch (e.g. `lab2`) and then merged via pull requests to `master`.
+Once this is done I'll notify you on Mattermost, if you want to see preview or look for materials in advance, please look for dedicated branch.
+
+
 ## C++ resources
 
 * Any good book about C++ will do..
