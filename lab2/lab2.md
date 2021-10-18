@@ -1,4 +1,4 @@
-# Lab 2 Building C++ projects
+# Lab 2 - Building C++ projects (8.10.2021)
 
 ## Tasks
 

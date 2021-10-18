@@ -18,3 +18,4 @@ enable_testing()
 
 add_subdirectory(test)
 add_subdirectory(lab2)
+add_subdirectory(lab3)
