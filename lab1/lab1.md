@@ -1,4 +1,4 @@
-# Lab1  1.10.2021
+# Lab1 - Introducing C++ (1.10.2021)
 
 1. Introduction, for basic information view [README](../README.md) highlights:
     * Mattermost channel for our lab only with name *nprg041-cpp-drozdik*, if you don't see it use `Find channel` in `2122ZS` "group" on the left (marked by a snowflake).

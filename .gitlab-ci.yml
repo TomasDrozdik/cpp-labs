@@ -21,4 +21,4 @@ build:
 test-lab2:
   stage: test
   script:
-    - ./build/test/runtests_lab2
+    - ./build/test/runtests
