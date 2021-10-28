@@ -3,6 +3,12 @@ project(labs)
 
 set(CMAKE_CXX_STANDARD 20)
 
+if(MSVC)
+  add_compile_options(/W4)
+else()
+  add_compile_options(-Wall -Wextra -Wpedantic)
+endif()
+
 # Add GTest dependency
 include(FetchContent)
 FetchContent_Declare(
@@ -19,3 +25,4 @@ enable_testing()
 add_subdirectory(test)
 add_subdirectory(lab2)
 add_subdirectory(lab3)
+add_subdirectory(lab4)
