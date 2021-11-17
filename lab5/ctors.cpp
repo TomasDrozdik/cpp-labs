@@ -60,7 +60,7 @@ struct S
 
 // This function takes argument of struct S, but since it is not a reference nor a pointer it
 // "pass by value" it means that we have to crete copy of passed argument -> use copy ctor.
-void foo(S s)
+void foo(S)
 {
     std::cout << "foo(S & s)\n";
 }
@@ -69,7 +69,7 @@ void foo(S s)
 // of variable s and you are free to do with it what you want.
 // Notice that no constructor is invoked. Since no new value is constructed the passed value is just
 // "handed over" to this function foo.
-void bar(S && s)
+void bar(S &&)
 {
     std::cout << "bar(S && s)\n";
 }
@@ -127,7 +127,7 @@ int main(void)
         std::cout << "\n 4 -------------------\n";
 
         int i{};
-        auto pi = &i;
+        [[maybe_unused]] auto pi = &i;
         //foo(S{pi}); // error is S(int *) is explicit otherwise this is possible and wrong
     }
     #endif
@@ -136,7 +136,7 @@ int main(void)
         std::cout << "\n 5 -------------------\n";
 
         int i{};
-        auto pi = &i;
+        [[maybe_unused]] auto pi = &i;
         //foo(S{pi}); // error is S(int *) is explicit otherwise this is possible and wrong
     }
     #endif

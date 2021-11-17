@@ -231,7 +231,7 @@ public:
     {
         std::size_t free_counter = 0;
         for (std::size_t i = 0; i < bitmap.size(); ++i) {
-            free_counter = bitmap[i] == free ? ++free_counter : 0;
+            free_counter = bitmap[i] == free ? free_counter + 1 : 0;
             if (free_counter == n) {
                 std::size_t start = i - (n - 1);
                 bitmap_fill(start, start + n, used);
