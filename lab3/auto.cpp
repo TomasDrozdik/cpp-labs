@@ -7,18 +7,18 @@ void baz(int const * const) {}
 int main() {
     {
         int x = 0;
-        auto a = x; // int - copy
-        auto & ar = x; // int &
+        [[maybe_unused]] auto a = x; // int - copy
+        [[maybe_unused]] auto & ar = x; // int &
     }
     {
         const int x = 1;
-        auto a = x; // int - copy
-        auto & ar = x; // const int & - const has to be deduced since the referenced variable cannot change
-        const auto & car = x; // const int & - const is explicitely specified
+        [[maybe_unused]] auto a = x; // int - copy
+        [[maybe_unused]] auto & ar = x; // const int & - const has to be deduced since the referenced variable cannot change
+        [[maybe_unused]] const auto & car = x; // const int & - const is explicitely specified
     }
     {
         int const * x = nullptr;
-        auto a = x; // int const * - copy pointed to value is const -> this is const
+        [[maybe_unused]] auto a = x; // int const * - copy pointed to value is const -> this is const
         auto & ar = x; // (int const *) & - reference to a pointer to a const int
 
         // foo(a); error that proves a is pointer to const int thus types are incompatible
